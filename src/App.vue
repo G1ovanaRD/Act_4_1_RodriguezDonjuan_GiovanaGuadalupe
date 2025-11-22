@@ -1,17 +1,15 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+import logoSistema from "./assets/logo-sistema.png";
 </script>
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <texto-body label="Componente TEXTO" size="500px"></texto-body>
+    <boton-login></boton-login>
+    <input-text></input-text>
+    <icon-element name="carbon:user-avatar" size="32"></icon-element>
+    <image-element :src="logoSistema" alt="Vue logo" width="100" height="100"></image-element>
   </div>
-  <HelloWorld msg="Guayaba" />
 </template>
 
 <style scoped>
@@ -27,4 +25,5 @@ import HelloWorld from "./components/HelloWorld.vue";
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
+
 </style>

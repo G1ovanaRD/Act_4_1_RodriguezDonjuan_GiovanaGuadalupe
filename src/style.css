@@ -11,6 +11,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --blue-1: #0C4891;
+  --blue-2:rgb(12, 72, 145,0.6);
+  --blue-3:#2A7DE1;
+  --calendar-predetermined:#74A0FF;
+  --calendar-selected:rgb(116, 160, 255,0.23);
+  --text-predetermined:#000000;
+  --text-secondary:#1E1E1E;
+  --text-terciary:#919191;
 }
 
 a {
@@ -76,4 +85,8 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+button{
+  cursor: pointer;
 }
