@@ -1,5 +1,5 @@
 <template>
-  <Icon :icon="name" :width="size" :height="size" />
+  <Icon :icon="name" :width="size" :height="size" :color="color" />
 </template>
 
 <script>
@@ -9,7 +9,8 @@ export default {
   name: "icon",
   props: {
     name: { type: String, default: "mdi:home" },
-    size: { type: String, default: "24" }
+    size: { type: String, default: "24" },
+    color: { type: String}
   },
   components: { Icon }
 }

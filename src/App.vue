@@ -4,11 +4,7 @@ import logoSistema from "./assets/logo-sistema.png";
 
 <template>
   <div>
-    <texto-body label="Componente TEXTO" size="500px"></texto-body>
-    <boton-login></boton-login>
-    <input-text></input-text>
-    <icon-element name="carbon:user-avatar" size="32"></icon-element>
-    <image-element :src="logoSistema" alt="Vue logo" width="100" height="100"></image-element>
+    <header-element></header-element>
   </div>
 </template>
 
