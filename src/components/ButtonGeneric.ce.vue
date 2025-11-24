@@ -20,7 +20,7 @@ button {
   border: none;
   padding: 10px 40px;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight:500;
   border-radius: 15px;
   font-family: 'Inter', sans-serif;

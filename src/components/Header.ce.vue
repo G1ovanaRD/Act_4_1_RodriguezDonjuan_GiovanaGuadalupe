@@ -4,7 +4,7 @@
         <image-element :src="logoSistema" alt="Vue logo" width="100" height="100"></image-element>
         <div class="header-porfile">
             <icon-element name="carbon:user" size="50" color="var(--blue-1)"></icon-element>
-            <button-generic label="Perfil" background="var(--blue-1)"></button-generic>
+            <button-generic label="PERFIL" background="var(--blue-1)"></button-generic>
         </div>
     </div>
 </template>
@@ -36,6 +36,8 @@ export default {
   align-items: center;
   padding: 10px 20px;
   border-bottom: 1px solid black;
+  box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.151);
+
 }
 
 .header-porfile {
