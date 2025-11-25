@@ -8,6 +8,7 @@
       <menu-element></menu-element>
       <calendar-element></calendar-element>
     </div>
+    <footer-element></footer-element>
   </div>
 </template>
 

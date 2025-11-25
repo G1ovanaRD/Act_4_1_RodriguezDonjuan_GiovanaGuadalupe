@@ -1,7 +1,7 @@
 <template>
 
     <div class="calendario-container">
-        <div>
+        <div class="calendar-wrapper">
             <header-calendar text="Enero"></header-calendar>
             <div class="calendar-grid">
                 <button-calendar :day="28" class="btn-dis"></button-calendar>
@@ -17,7 +17,7 @@
                 <button-calendar :day="7" class="today"></button-calendar>
                 <button-calendar :day="8"></button-calendar>
                 <button-calendar :day="9"></button-calendar>
-                <button-calendar :day="10" class="selected"></button-calendar>
+                <button-calendar :day="10"></button-calendar>
                 <button-calendar :day="11"></button-calendar>
                 <button-calendar :day="12"></button-calendar>   
                 <button-calendar :day="13"></button-calendar>
@@ -41,13 +41,11 @@
                 <button-calendar :day="1" class="btn-dis"></button-calendar>
             </div>
             <div class="more">
-                <button-generic label="Listo" background="var(--blue-3)"></button-generic>
+                <button-generic label="Listo" background="var(--blue-3)" @click="addTask"></button-generic>
             </div>
         </div>
         <div class="calendar">
-            <label-task :icon="bellFill" text="Ejercicios matemáticas"></label-task>
-            <label-task :icon="bellFill" text="Tarea bases de datos"></label-task>
-            <label-task :icon="bell" text="Tutoría academica"></label-task>
+            <label-task v-for="(task, index) in tasks" :key="index" :icon="task.icon" :text="task.text"></label-task>
             <div class="more">
                 <button-generic label="VER MÁS"></button-generic>
             </div>
@@ -63,19 +61,34 @@ import ButtonGeneric from './ButtonGeneric.ce.vue';
 import LabelTask from './LabelTask.ce.vue';
 import bellFill from '../assets/bell_fill.svg';
 import bell from '../assets/bell.svg';
+import Footer from './Footer.ce.vue';
 
 export default {
   components: {
     ButtonCalendar,
     HeaderCalendar,
     ButtonGeneric,
-    LabelTask
+    LabelTask,
+    Footer
   },
   data() {
     return {
       bellFill,
-      bell
+      bell,
+      tasks: [
+        { icon: bellFill, text: 'Ejercicios matemáticas' },
+        { icon: bellFill, text: 'Tarea bases de datos' },
+        { icon: bell, text: 'Tutoría academica' }
+      ]
     };
+  },
+  methods: {
+    addTask() {
+      this.tasks.push({
+        icon: this.bell,
+        text: 'Agregaste nueva tarea'
+      });
+    }
   }
 };
 </script>
@@ -86,6 +99,11 @@ export default {
     grid-template-columns: repeat(7, 1fr);
     padding: 10px;
     gap:5px;
+}
+
+.calendar-wrapper {
+    width: 100%;
+    max-width: 100%;
 }
 
 .btn-dis {
@@ -106,7 +124,8 @@ export default {
 }
 
 .calendario-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 20px 80px;
 }
@@ -121,7 +140,8 @@ export default {
 }
 
 .more {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: end;
 }
@@ -130,5 +150,39 @@ export default {
     font-size: 14px;
     padding: 25px 70px;
     border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .calendario-container {
+        padding: 20px 40px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .calendario-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .tutoria {
+        padding: 20px 50px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendario-container {
+        padding: 10px;
+    }
+    
+    .calendar-grid {
+        gap: 3px;
+        padding: 5px;
+    }
+    
+    .tutoria {
+        padding: 15px 30px;
+    }
 }
 </style>

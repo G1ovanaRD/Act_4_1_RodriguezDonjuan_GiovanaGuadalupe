@@ -27,4 +27,18 @@ button {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+  button {
+    padding: 8px 30px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  button {
+    padding: 6px 20px;
+    font-size: 14px;
+  }
+}
+
 </style>
