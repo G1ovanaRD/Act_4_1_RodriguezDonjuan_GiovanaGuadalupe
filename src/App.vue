@@ -1,26 +1,12 @@
 <script setup>
-import logoSistema from "./assets/logo-sistema.png";
 </script>
 
 <template>
-  <div>
-    <header-element></header-element>
-    <div class="body-container">
-      <menu-element></menu-element>
-      <slider-element></slider-element>
-      <!-- cards -->
-      <div class="cards-container">
-        <div class="cursos-button">
-          <texto-body label="CURSOS INSCRITOS" class="texto"></texto-body>
-        </div>
-        <card-element class="card"></card-element>
-        <!-- <card-element class="card"></card-element> -->
-      </div>
-    </div>
-    <!-- footer -->
-    <footer-element></footer-element>
-  </div>
+  <router-view />
 </template>
+
+<style scoped>
+</style>
 
 <style scoped>
 .body-container {
