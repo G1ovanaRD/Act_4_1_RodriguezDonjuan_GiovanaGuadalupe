@@ -45,18 +45,17 @@ const goToCalendar = () => {
 .cards-container {
   margin-top: 20px;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
 .card{
-  width: 49%;
+  width: 100%;
   cursor: pointer;
 }
 
 .calendar{
-    /* height: 100%; */
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 10px 25px rgb(12, 72, 145,0.4);
@@ -64,8 +63,9 @@ const goToCalendar = () => {
 }
 
 .cursos-button {
-  display:flex;
+  display: flex;
   width: 100%;
+  grid-column: 1 / -1;
   margin-bottom: 20px;
   align-items: center;
   justify-content: center;
@@ -80,6 +80,30 @@ const goToCalendar = () => {
   cursor:pointer;
   margin: 0;
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .texto {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .body-container {
+    padding: 10px;
+  }
+  
+  .cards-container {
+    gap: 15px;
+  }
+  
+  .texto {
+    font-size: 16px;
+  }
 }
 
 </style>

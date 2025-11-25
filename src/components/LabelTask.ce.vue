@@ -40,7 +40,8 @@ export default {
 .task-container {
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   position: relative;
   padding: 10px;
   border-radius: 10px;
@@ -57,5 +58,31 @@ export default {
   font-weight: bold;
   width: 100%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .label {
+    font-size: 18px;
+  }
+  
+  .icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-container {
+    padding: 8px;
+  }
+  
+  .label {
+    font-size: 14px;
+  }
+  
+  .icon img {
+    width: 30px;
+    height: 30px;
+  }
 }
 </style>

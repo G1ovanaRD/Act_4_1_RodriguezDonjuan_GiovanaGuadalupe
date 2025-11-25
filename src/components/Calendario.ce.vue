@@ -1,7 +1,7 @@
 <template>
 
     <div class="calendario-container">
-        <div>
+        <div class="calendar-wrapper">
             <header-calendar text="Enero"></header-calendar>
             <div class="calendar-grid">
                 <button-calendar :day="28" class="btn-dis"></button-calendar>
@@ -101,6 +101,11 @@ export default {
     gap:5px;
 }
 
+.calendar-wrapper {
+    width: 100%;
+    max-width: 100%;
+}
+
 .btn-dis {
     color: var(--text-tertiary);
     pointer-events: none;
@@ -119,7 +124,8 @@ export default {
 }
 
 .calendario-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
     padding: 20px 80px;
 }
@@ -134,7 +140,8 @@ export default {
 }
 
 .more {
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     justify-content: end;
 }
@@ -143,5 +150,39 @@ export default {
     font-size: 14px;
     padding: 25px 70px;
     border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    .calendario-container {
+        padding: 20px 40px;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .calendario-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+    
+    .tutoria {
+        padding: 20px 50px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendario-container {
+        padding: 10px;
+    }
+    
+    .calendar-grid {
+        gap: 3px;
+        padding: 5px;
+    }
+    
+    .tutoria {
+        padding: 15px 30px;
+    }
 }
 </style>

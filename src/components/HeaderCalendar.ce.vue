@@ -60,4 +60,37 @@ export default {
     font-weight: bold;
     color:black;
 }
+
+@media (max-width: 768px) {
+    .header {
+        gap: 5px;
+    }
+    
+    .arrow-button {
+        padding: 12px;
+    }
+    
+    .arrow-button img {
+        width: 10px;
+        height: auto;
+    }
+    
+    .text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .arrow-button {
+        padding: 8px;
+    }
+    
+    .arrow-button img {
+        width: 8px;
+    }
+    
+    .text {
+        font-size: 14px;
+    }
+}
 </style>

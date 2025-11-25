@@ -37,12 +37,25 @@ export default {
   padding: 10px 20px;
   border-bottom: 1px solid black;
   box-shadow: 0px 10px 12px 0px rgba(0, 0, 0, 0.151);
-
 }
 
 .header-porfile {
   display: flex;
   gap: 10px;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 </style>
