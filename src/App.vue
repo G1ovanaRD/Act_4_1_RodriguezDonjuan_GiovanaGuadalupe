@@ -8,29 +8,55 @@ import logoSistema from "./assets/logo-sistema.png";
     <div class="body-container">
       <menu-element></menu-element>
       <slider-element></slider-element>
+      <!-- cards -->
+      <div class="cards-container">
+        <div class="cursos-button">
+          <texto-body label="CURSOS INSCRITOS" class="texto"></texto-body>
+        </div>
+        <card-element class="card"></card-element>
+        <!-- <card-element class="card"></card-element> -->
+      </div>
     </div>
+    <!-- footer -->
+    <footer-element></footer-element>
   </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-
 .body-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+}
+
+.cards-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card{
+  width: 49%;
+}
+
+.cursos-button {
+  display:flex;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgb(12, 72, 145,0.4);
+}
+
+.texto{
+  font-size: 22px;
+  font-weight: bold;
+  color:var(--text-secondary);
+  cursor:pointer;
 }
 
 </style>

@@ -8,6 +8,8 @@ import ButtonGenericCe from './components/ButtonGeneric.ce.vue'
 import ItemMenu from './components/Item-Menu.ce.vue'
 import Menu from './components/Menu.ce.vue'
 import SliderCe from './components/Slider.ce.vue'
+import Card from './components/Card.ce.vue'
+import Footer from './components/Footer.ce.vue'
 
 const text=defineCustomElement(Texto)
 customElements.define('texto-body', text)
@@ -29,6 +31,12 @@ customElements.define('item-menu', item)
 
 const menu=defineCustomElement(Menu)
 customElements.define('menu-element', menu)
+
+const footer=defineCustomElement(Footer)
+customElements.define('footer-element', footer)
+
+const card=defineCustomElement(Card)
+customElements.define('card-element', card)
 
 const header=defineCustomElement(Header)
 customElements.define('header-element', header)
