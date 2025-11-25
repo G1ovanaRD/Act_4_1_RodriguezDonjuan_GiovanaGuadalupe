@@ -1,5 +1,5 @@
 <template>
-    <button>{{ day }}</button>
+    <button :class="{ selected: isSelected }" @click="toggleSelected">{{ day }}</button>
 </template>
 
 <script>
@@ -8,6 +8,16 @@ export default {
         day: {
             type: Number,
             default: 1
+        }
+    },
+    data() {
+        return {
+            isSelected: false
+        };
+    },
+    methods: {
+        toggleSelected() {
+            this.isSelected = !this.isSelected;
         }
     }
 };
@@ -23,5 +33,10 @@ button {
     font-size: 18px;
     font-weight: bold;
     background-color: white;
+}
+
+.selected {
+    background-color: var(--calendar-selected);
+    color: var(--calendar-predetermined);
 }
 </style>

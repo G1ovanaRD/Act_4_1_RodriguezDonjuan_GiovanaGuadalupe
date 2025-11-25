@@ -21,7 +21,12 @@ const goToCalendar = () => {
           <texto-body label="CURSOS INSCRITOS" class="texto"></texto-body>
         </div>
         <card-element class="card" @click="goToCalendar"></card-element>
-        <!-- <card-element class="card"></card-element> -->
+        <div class="card">
+          <div class="calendar">
+            <p class="texto">CALENDARIO</p>
+            <header-calendar></header-calendar>
+          </div>
+        </div>
       </div>
     </div>
     <!-- footer -->
@@ -50,6 +55,14 @@ const goToCalendar = () => {
   cursor: pointer;
 }
 
+.calendar{
+    /* height: 100%; */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px rgb(12, 72, 145,0.4);
+  text-align: center;
+}
+
 .cursos-button {
   display:flex;
   width: 100%;
@@ -65,6 +78,8 @@ const goToCalendar = () => {
   font-weight: bold;
   color:var(--text-secondary);
   cursor:pointer;
+  margin: 0;
+  padding: 0;
 }
 
 </style>

@@ -17,7 +17,7 @@
                 <button-calendar :day="7" class="today"></button-calendar>
                 <button-calendar :day="8"></button-calendar>
                 <button-calendar :day="9"></button-calendar>
-                <button-calendar :day="10" class="selected"></button-calendar>
+                <button-calendar :day="10"></button-calendar>
                 <button-calendar :day="11"></button-calendar>
                 <button-calendar :day="12"></button-calendar>   
                 <button-calendar :day="13"></button-calendar>
@@ -41,13 +41,11 @@
                 <button-calendar :day="1" class="btn-dis"></button-calendar>
             </div>
             <div class="more">
-                <button-generic label="Listo" background="var(--blue-3)"></button-generic>
+                <button-generic label="Listo" background="var(--blue-3)" @click="addTask"></button-generic>
             </div>
         </div>
         <div class="calendar">
-            <label-task :icon="bellFill" text="Ejercicios matemáticas"></label-task>
-            <label-task :icon="bellFill" text="Tarea bases de datos"></label-task>
-            <label-task :icon="bell" text="Tutoría academica"></label-task>
+            <label-task v-for="(task, index) in tasks" :key="index" :icon="task.icon" :text="task.text"></label-task>
             <div class="more">
                 <button-generic label="VER MÁS"></button-generic>
             </div>
@@ -63,19 +61,34 @@ import ButtonGeneric from './ButtonGeneric.ce.vue';
 import LabelTask from './LabelTask.ce.vue';
 import bellFill from '../assets/bell_fill.svg';
 import bell from '../assets/bell.svg';
+import Footer from './Footer.ce.vue';
 
 export default {
   components: {
     ButtonCalendar,
     HeaderCalendar,
     ButtonGeneric,
-    LabelTask
+    LabelTask,
+    Footer
   },
   data() {
     return {
       bellFill,
-      bell
+      bell,
+      tasks: [
+        { icon: bellFill, text: 'Ejercicios matemáticas' },
+        { icon: bellFill, text: 'Tarea bases de datos' },
+        { icon: bell, text: 'Tutoría academica' }
+      ]
     };
+  },
+  methods: {
+    addTask() {
+      this.tasks.push({
+        icon: this.bell,
+        text: 'Agregaste nueva tarea'
+      });
+    }
   }
 };
 </script>
