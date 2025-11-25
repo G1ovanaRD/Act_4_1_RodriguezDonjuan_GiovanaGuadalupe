@@ -1,10 +1,15 @@
 import { defineCustomElement } from 'vue'
-import BotonLogin from './components/BotonLogin.ce.vue'
 import Texto from './components/Texto.ce.vue'
 import Input from './components/Input.ce.vue'
 import Icon from './components/Icon.ce.vue'
 import Image from './components/Image.ce.vue'
-
+import Header from './components/Header.ce.vue'
+import ButtonGenericCe from './components/ButtonGeneric.ce.vue'
+import ItemMenu from './components/Item-Menu.ce.vue'
+import Menu from './components/Menu.ce.vue'
+import SliderCe from './components/Slider.ce.vue'
+import Card from './components/Card.ce.vue'
+import Footer from './components/Footer.ce.vue'
 
 const text=defineCustomElement(Texto)
 customElements.define('texto-body', text)
@@ -18,5 +23,23 @@ customElements.define('icon-element', icon)
 const image=defineCustomElement(Image)
 customElements.define('image-element', image)
 
-const BotonL = defineCustomElement(BotonLogin)
-customElements.define('boton-login', BotonL)
+const ButtonGeneric=defineCustomElement(ButtonGenericCe)
+customElements.define('button-generic', ButtonGeneric)
+
+const item=defineCustomElement(ItemMenu)
+customElements.define('item-menu', item)
+
+const menu=defineCustomElement(Menu)
+customElements.define('menu-element', menu)
+
+const footer=defineCustomElement(Footer)
+customElements.define('footer-element', footer)
+
+const card=defineCustomElement(Card)
+customElements.define('card-element', card)
+
+const header=defineCustomElement(Header)
+customElements.define('header-element', header)
+
+const slider=defineCustomElement(SliderCe)
+customElements.define('slider-element', slider)
