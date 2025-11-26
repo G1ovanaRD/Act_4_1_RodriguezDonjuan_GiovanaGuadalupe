@@ -4,6 +4,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
+// Navega a la vista de calendario
 const goToCalendar = () => {
   router.push('/calendar');
 };
@@ -11,16 +12,23 @@ const goToCalendar = () => {
 
 <template>
   <div>
+    <!-- Header principal -->
     <header-element></header-element>
     <div class="body-container">
+      <!-- Menu de navegacion -->
       <menu-element></menu-element>
+      <!-- Slider de imagenes -->
       <slider-element></slider-element>
-      <!-- cards -->
+      
+      <!-- Seccion de cards -->
       <div class="cards-container">
+        <!-- Titulo de seccion -->
         <div class="cursos-button">
           <texto-body label="CURSOS INSCRITOS" class="texto"></texto-body>
         </div>
+        <!-- Card de tareas con navegacion al calendario -->
         <card-element class="card" @click="goToCalendar"></card-element>
+        <!-- Card con preview del calendario -->
         <div class="card">
           <div class="calendar">
             <p class="texto">CALENDARIO</p>
@@ -29,7 +37,7 @@ const goToCalendar = () => {
         </div>
       </div>
     </div>
-    <!-- footer -->
+    <!-- Footer -->
     <footer-element></footer-element>
   </div>
 </template>

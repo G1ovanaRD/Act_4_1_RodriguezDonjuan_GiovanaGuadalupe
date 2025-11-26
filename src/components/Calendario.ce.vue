@@ -1,13 +1,20 @@
 <template>
 
     <div class="calendario-container">
+        <!-- contenedor del componente -->
         <div class="calendar-wrapper">
+            <!-- Encabezado con mes y flechas de navegacion -->
             <header-calendar text="Enero"></header-calendar>
+            
+            <!-- Grid de dias del mes -->
             <div class="calendar-grid">
+                <!-- Dias del mes anterior (deshabilitados) -->
                 <button-calendar :day="28" class="btn-dis"></button-calendar>
                 <button-calendar :day="29" class="btn-dis"></button-calendar>
                 <button-calendar :day="30" class="btn-dis"></button-calendar>
                 <button-calendar :day="31" class="btn-dis"></button-calendar>
+                
+                <!-- Dias del mes actual -->
                 <button-calendar :day="1"></button-calendar>
                 <button-calendar :day="2"></button-calendar>
                 <button-calendar :day="3"></button-calendar>
@@ -38,17 +45,28 @@
                 <button-calendar :day="28"></button-calendar>
                 <button-calendar :day="29"></button-calendar>
                 <button-calendar :day="30"></button-calendar>
+                
+                <!-- Dia del mes siguiente deshabilitado -->
                 <button-calendar :day="1" class="btn-dis"></button-calendar>
             </div>
+            
+            <!-- Boton para confirmar seleccion -->
             <div class="more">
                 <button-generic label="Listo" background="var(--blue-3)" @click="addTask"></button-generic>
             </div>
         </div>
+        
+        <!--seccion de tareas y tutorias -->
         <div class="calendar">
+            <!--lista de tareas renderizadas dinamicamente -->
             <label-task v-for="(task, index) in tasks" :key="index" :icon="task.icon" :text="task.text"></label-task>
+            
+            <!--boton para ver mas tareas -->
             <div class="more">
                 <button-generic label="VER MÁS"></button-generic>
             </div>
+            
+            <!--boton para reservar tutoria -->
             <button-generic label="RESERVAR TUTORÍA" background="var(--blue-3)" class="tutoria"></button-generic>
         </div>
     </div>
@@ -75,6 +93,7 @@ export default {
     return {
       bellFill,
       bell,
+      // Lista inicial de tareas
       tasks: [
         { icon: bellFill, text: 'Ejercicios matemáticas' },
         { icon: bellFill, text: 'Tarea bases de datos' },
@@ -83,6 +102,7 @@ export default {
     };
   },
   methods: {
+    // Agrega una nueva tarea a la lista cuando se presiona "Listo"
     addTask() {
       this.tasks.push({
         icon: this.bell,
@@ -152,6 +172,7 @@ export default {
     border-radius: 10px;
 }
 
+/* Tablets y pantallas medianas */
 @media (max-width: 1200px) {
     .calendario-container {
         padding: 20px 40px;
@@ -159,6 +180,7 @@ export default {
     }
 }
 
+/*cambio a layout de 1 columna */
 @media (max-width: 900px) {
     .calendario-container {
         grid-template-columns: 1fr;
@@ -171,6 +193,7 @@ export default {
     }
 }
 
+/* celular */
 @media (max-width: 480px) {
     .calendario-container {
         padding: 10px;

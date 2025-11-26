@@ -1,12 +1,13 @@
 <template>
+    <!-- Boton generico reutilizable con color personalizable -->
     <button :style="{ backgroundColor: background }">{{ label }}</button>
 </template>
 <script>
 export default {
   name: "ButtonGeneric",
   props: {
-    label: { type: String, default: "texto" },
-    background: { type: String, default: "var(--blue-1)" }
+    label: { type: String, default: "texto" }, // Texto del boton
+    background: { type: String, default: "var(--blue-1)" } // Color de fondo
   },
 };
 </script>

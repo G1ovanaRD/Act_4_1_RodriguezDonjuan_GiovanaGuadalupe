@@ -1,9 +1,12 @@
 <template>
     <div class="header">
+        <!-- boton para mes anterior -->
         <button class="arrow-button">
             <img :src="right" alt="Previous" />
         </button>
+        <!-- texto del mes y año -->
         <text-body label="Enero 2025" class="text"></text-body>
+        <!-- boton para mes siguiente -->
         <button class="arrow-button">
             <img :src="left" alt="Next" />
         </button>
@@ -26,8 +29,8 @@ export default {
     },
     data() {
         return {
-            right,
-            left
+            right, // SVG flecha derecha
+            left // SVG flecha izquierda
         };
     }
 };
