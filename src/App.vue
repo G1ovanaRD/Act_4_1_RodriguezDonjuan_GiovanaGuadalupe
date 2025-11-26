@@ -1,7 +1,9 @@
 <script setup>
+// Componente raiz de la aplicacion
 </script>
 
 <template>
+  <!-- Router view para renderizar las vistas segun la ruta -->
   <router-view />
 </template>
 

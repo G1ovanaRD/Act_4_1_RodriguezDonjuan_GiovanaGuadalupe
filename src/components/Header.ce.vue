@@ -1,7 +1,10 @@
 <template>
     <div class="header-container">
+        <!-- Icono de informacion -->
         <icon-element name="material-symbols-light:info-outline-rounded" size="50"></icon-element>
+        <!-- Logo del sistema -->
         <image-element :src="logoSistema" alt="Vue logo" width="100" height="100"></image-element>
+        <!-- Seccion de perfil de usuario -->
         <div class="header-porfile">
             <icon-element name="et:profile-female" size="50" color="var(--blue-1)"></icon-element>
             <button-generic label="PERFIL" background="var(--blue-1)"></button-generic>
@@ -23,7 +26,7 @@ export default {
   },
   data() {
     return {
-      logoSistema,
+      logoSistema, // Logo importado
     };
   },
 };

@@ -1,6 +1,7 @@
 <template>
     <div class="menu-container">
         <nav>
+            <!-- items del menu de navegacion -->
             <item-menu label="INICIO" background="var(--blue-2)"></item-menu>
             <item-menu label="MATERIAL" background="var(--blue-2)"></item-menu>
             <item-menu label="FOROS" background="var(--blue-2)"></item-menu>

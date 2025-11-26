@@ -1,6 +1,8 @@
 <template>
     <div class="card-container">
+        <!-- titulo de la card -->
         <texto-body label="TAREAS" class="texto"></texto-body>
+        <!-- icono de task -->
         <icon-element name="carbon:task-add" size="80" color="var(--blue-1)"></icon-element>
     </div>
 </template>

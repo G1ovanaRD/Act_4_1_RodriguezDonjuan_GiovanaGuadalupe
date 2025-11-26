@@ -2,6 +2,7 @@
     <div>
         <footer>
             <div class="footer-content">
+                <!-- Texto de derechos y politicas -->
                 <texto-body label="© UASLP | TÉRMINOS DE CONDICIONES | POLITICAS DE PRIVACIDAD" class="footer-text"></texto-body>
             </div>
         </footer>

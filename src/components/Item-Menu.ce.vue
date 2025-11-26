@@ -1,4 +1,5 @@
 <template>
+    <!-- Boton de menu con estilo dinamico -->
     <button :style="{ backgroundColor: background }">{{ label }}</button>
 </template>
 
@@ -6,8 +7,8 @@
 export default {
   name: "item-menu",
   props: {
-    label:String,
-    background:String
+    label: String, // texto del boton
+    background: String // color de fondo personalizable
   }
 };
 </script>

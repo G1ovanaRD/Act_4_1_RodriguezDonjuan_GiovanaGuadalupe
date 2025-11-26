@@ -1,4 +1,5 @@
 <template>
+    <!-- Boton de dia del calendario con estado seleccionable -->
     <button :class="{ selected: isSelected }" @click="toggleSelected">{{ day }}</button>
 </template>
 
@@ -7,15 +8,16 @@ export default {
     props: {
         day: {
             type: Number,
-            default: 1
+            default: 1 // Numero del dia
         }
     },
     data() {
         return {
-            isSelected: false
+            isSelected: false // Estado de seleccion
         };
     },
     methods: {
+        // cambia el estado de seleccion al hacer click
         toggleSelected() {
             this.isSelected = !this.isSelected;
         }

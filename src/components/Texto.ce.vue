@@ -1,11 +1,12 @@
 <template>
+  <!-- Componente simple de texto reutilizable -->
   <p>{{ label }}</p>
 </template>
 
 <script>
 export default {
   props: {
-    label: String
+    label: String // Texto a mostrar
   },
 };
 </script>

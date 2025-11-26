@@ -1,7 +1,9 @@
 <template>
     <div class="container">
         <div class="slider-container">
+            <!-- Imagen del carrusel -->
             <img :src="carruselImge" alt="Slide Image" class="img" />
+            <!-- Flechas de navegacion -->
             <icon-element name="raphael:arrowleft" size="50" class="left-icon"></icon-element>
             <icon-element name="raphael:arrowright" size="50" class="right-icon"></icon-element>
         </div>
@@ -19,7 +21,7 @@ export default {
   },
   data() {
     return {
-      carruselImge,
+      carruselImge, // Imagen del slider
     };
   },
 };

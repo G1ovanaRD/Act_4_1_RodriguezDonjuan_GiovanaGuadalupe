@@ -1,8 +1,10 @@
 <template>
     <div class="task-container">
+        <!-- Icono de la tarea -->
         <div class="icon">
             <img :src="icon" :alt="alt" :width="width" :height="height" />
         </div>
+        <!-- Texto de la tarea -->
         <div class="label">
             <label>{{ text }}</label>
         </div>
@@ -18,7 +20,7 @@ export default {
     },
     icon: {
       type: String,
-      required: true
+      required: true // Icono personalizable
     },
     alt: { 
       type: String, 
